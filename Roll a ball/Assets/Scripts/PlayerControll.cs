@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
+    public GameObject r;
     public float speed;
     private Rigidbody rb;
     public Text countText;
@@ -17,6 +18,9 @@ public class PlayerControll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //r = GetComponent<Button>();
+        //r.enabled = false;
+        r.SetActive(false);
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
@@ -91,7 +95,10 @@ public class PlayerControll : MonoBehaviour
         countText.text = "Count: " + count.ToString();
         if (count>=12)
         {
+
             winText.text = "You Win!";
+            //r.enabled = true;
+            r.SetActive(true);
         }
     }
 }

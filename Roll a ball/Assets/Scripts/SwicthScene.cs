@@ -7,8 +7,8 @@ public class SwicthScene : MonoBehaviour
 {
     public void GoToMinigameScene()
     {
-        //SceneManager.LoadScene("minigame");
-        Application.LoadLevel("New Scene");
+        SceneManager.LoadScene("MiniGame");
+        //Application.LoadLevel("New Scene");
     }
     public void GoToMinigame1Scene()
     {
